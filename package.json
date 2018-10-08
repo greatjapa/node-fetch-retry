@@ -1,0 +1,32 @@
+{
+  "name": "fetchRetry",
+  "version": "1.0.0",
+  "description": "Retry library for node-fetch",
+  "scripts": {
+    "test": "mocha ./test --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greatjapa/fetchRetry.git"
+  },
+  "bugs": {
+    "url": "https://github.com/greatjapa/fetchRetry/issues"
+  },
+  "homepage": "https://github.com/greatjapa/fetchRetry/blob/master/README.md",
+  "keywords": [
+    "node",
+    "fetch",
+    "retry",
+    "request",
+    "microservice"
+  ],
+  "author": "greatjapa <greatjapa@gmail.com (https://github.com/greatjapa)",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "should": "^13.2.3"
+  },
+  "dependencies": {
+    "node-fetch": "^2.2.0"
+  }
+}
