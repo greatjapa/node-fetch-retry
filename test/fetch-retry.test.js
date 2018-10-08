@@ -1,8 +1,8 @@
 require('should');
 const assert = require('assert');
-const fetchRetry = require('..');
+const fetch = require('..');
 
-describe('fetchRetry test ', async function () {
+describe('fetch-retry test ', async function () {
     it('should raise an error by timeout', async function () {
         this.timeout(10000);
 
@@ -11,7 +11,7 @@ describe('fetchRetry test ', async function () {
             timeout: 2
         }
         try {
-            await fetchRetry('https://google.com', opts)
+            await fetch('https://google.com', opts)
             should.fail('no timeout error was thrown for low timeout')
         } catch (e) {
             // do nothing
@@ -30,7 +30,7 @@ describe('fetchRetry test ', async function () {
             }
         }
         try {
-            await fetchRetry('https://google.com', opts)
+            await fetch('https://google.com', opts)
             should.fail('no timeout error was thrown for low timeout')
         } catch (e) {
             calls.should.have.lengthOf(3)
@@ -44,7 +44,7 @@ describe('fetchRetry test ', async function () {
             retry: 3
         }
         try {
-            await fetchRetry('https://google.com', opts)
+            await fetch('https://google.com', opts)
         } catch (e) {
             should.fail('error was thrown when it should not')
         }
@@ -61,7 +61,7 @@ describe('fetchRetry test ', async function () {
             }
         }
         try {
-            await fetchRetry('https://fakeURLfake', opts)
+            await fetch('https://fakeURLfake', opts)
             should.fail('no error was thrown when for fake URL')
         } catch (e) {
             calls.should.have.lengthOf(5)
