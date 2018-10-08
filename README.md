@@ -24,4 +24,15 @@ const fetchRetry = require('fetchRetry');
 let res = await fetchRetry('https://google.com', { method: 'GET', retry: 3 })
 ```
 
-The example above includes the option `retry`
+If you want to add callback that will be called between the retries:
+
+```javascript
+let opts = {
+    method: 'GET', 
+    retry: 3,
+    callback: retry => { calls.push(retry) }
+}
+
+const fetchRetry = require('fetchRetry');
+let res = await fetchRetry('https://google.com', opts)
+```
