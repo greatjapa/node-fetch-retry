@@ -1,11 +1,11 @@
-# fetch-retry <a href="https://travis-ci.org/greatjapa/fetch-retry"><img alt="Travis Status" src="https://travis-ci.org/greatjapa/fetch-retry.svg?branch=master"></a> [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/greatjapa/fetch-retry/blob/master/LICENSE)
+# node-fetch-retry <a href="https://travis-ci.org/greatjapa/node-fetch-retry"><img alt="Travis Status" src="https://travis-ci.org/greatjapa/node-fetch-retry.svg?branch=master"></a> [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/greatjapa/node-fetch-retry/blob/master/LICENSE)
 
-`fetch-retry` is a wrapper library that add retry over `node-fetch`.
+`node-fetch-retry` is a wrapper library that add retry over `node-fetch`.
 
 
 ## How to install?
 ```bash
-npm i --save fetch-retry
+npm i --save node-fetch-retry
 ```
 
 ## How to use?
@@ -17,10 +17,10 @@ const fetch = require('node-fetch');
 let res = await fetch('https://google.com', { method: 'GET' })
 ```
 
-The code down bellow shows how `fetch-retry` works:
+The code down bellow shows how `node-fetch-retry` works:
 
 ```javascript
-const fetch = require('fetch-retry');
+const fetch = require('node-fetch-retry');
 let res = await fetch('https://google.com', { method: 'GET', retry: 3 })
 ```
 
@@ -33,6 +33,6 @@ let opts = {
     callback: retry => { calls.push(retry) }
 }
 
-const fetch = require('fetch-retry');
+const fetch = require('node-fetch-retry');
 let res = await fetch('https://google.com', opts)
 ```

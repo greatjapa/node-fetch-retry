@@ -2,7 +2,7 @@ require('should');
 const assert = require('assert');
 const fetch = require('..');
 
-describe('fetch-retry test ', async function () {
+describe('node-fetch-retry test ', async function () {
     it('should raise an error by timeout', async function () {
         this.timeout(10000);
 
