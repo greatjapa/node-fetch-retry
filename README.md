@@ -1,4 +1,4 @@
-# node-fetch-retry <a href="https://travis-ci.org/greatjapa/node-fetch-retry"><img alt="Travis Status" src="https://travis-ci.org/greatjapa/node-fetch-retry.svg?branch=master"></a> [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/greatjapa/node-fetch-retry/blob/master/LICENSE)
+# node-fetch-retry [![npm version](https://img.shields.io/npm/v/node-fetch-retry.svg?style=flat)](https://www.npmjs.com/package/node-fetch-retry) [![NPM](https://img.shields.io/npm/dt/node-fetch-retry.svg?style=flat-square&colorB=fd7463)](https://www.npmjs.com/package/node-fetch-retry) <a href="https://travis-ci.org/greatjapa/node-fetch-retry"><img alt="Travis Status" src="https://travis-ci.org/greatjapa/node-fetch-retry.svg?branch=master"></a> [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/greatjapa/node-fetch-retry/blob/master/LICENSE)
 
 `node-fetch-retry` is a wrapper library that add retry over `node-fetch`.
 
