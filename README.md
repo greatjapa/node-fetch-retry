@@ -30,7 +30,7 @@ If you want to add callback that will be called between the retries:
 let opts = {
     method: 'GET', 
     retry: 3,
-    callback: retry => { calls.push(retry) }
+    callback: retry => { console.log(`Trying: ${retry}`) }
 }
 
 const fetch = require('node-fetch-retry');
