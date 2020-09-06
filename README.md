@@ -24,7 +24,16 @@ const fetch = require('node-fetch-retry');
 let res = await fetch('https://google.com', { method: 'GET', retry: 3 })
 ```
 
-If you want to add callback that will be called between the retries:
+A pause (in milliseconds) can be added between retry attempts using the `pause` option. Pause values < 0 are treated as 0.
+
+The following example waits 1 seconds (1000 ms) between retry attempts.
+
+```javascript
+const fetch = require('node-fetch-retry');
+let res = await fetch('https://google.com', { method: 'GET', retry: 3, pause: 1000 })
+```
+
+If you want to add callback that will be called between the retries. The callback is invoked BEFORE any (optional) pauses.
 
 ```javascript
 let opts = {
