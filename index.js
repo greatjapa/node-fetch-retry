@@ -17,9 +17,9 @@ module.exports = async (url, opts) => {
             }
 
             if (opts.pause) {
-                console.log("pausing..");
+                if (!opts.silent) console.log("pausing..");
                 await sleep(opts.pause);
-                console.log("done pausing...");
+                if (!opts.silent) console.log("done pausing...");
             }
         }
     }
