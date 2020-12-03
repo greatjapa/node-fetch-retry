@@ -2,7 +2,6 @@ const fetch = require('node-fetch');
 
 module.exports = async (url, opts) => {
     let retry = opts && opts.retry || 3
-    let pause = (opts && opts.pause && opts.pause > 0) || 0
 
     while (retry > 0) {
         try {
