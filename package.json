@@ -1,6 +1,6 @@
 {
   "name": "node-fetch-retry",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Retry library for node-fetch",
   "scripts": {
     "test": "mocha ./test --recursive"
