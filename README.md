@@ -45,3 +45,13 @@ let opts = {
 const fetch = require('node-fetch-retry');
 let res = await fetch('https://google.com', opts)
 ```
+
+If you would like to silence pause messages in your console include a silent boolean in your options.
+```javascript
+let opts = {
+    method: 'GET',
+    retry: 3,
+    pause: 1000,
+    silent: true
+}
+```
