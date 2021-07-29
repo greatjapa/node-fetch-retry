@@ -7,7 +7,7 @@ module.exports = async (url, opts) => {
         try {
             return await fetch(url, opts)
         } catch(e) {
-            if (opts.callback) {
+            if (opts && opts.callback) {
                 opts.callback(retry)
             }        
             retry = retry - 1
@@ -15,10 +15,10 @@ module.exports = async (url, opts) => {
                 throw e
             }
 
-            if (opts.pause) {
-                if (!opts.silent) console.log("pausing..");
+            if (opts && opts.pause) {
+                if (opts && !opts.silent) console.log("pausing..");
                 await sleep(opts.pause);
-                if (!opts.silent) console.log("done pausing...");
+                if (opts && !opts.silent) console.log("done pausing...");
             }
         }
     }
