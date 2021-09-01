@@ -1,5 +1,6 @@
 require('should');
-const assert = require('assert');
+
+const timeoutSignal = require('timeout-signal');
 const fetch = require('..');
 
 describe('node-fetch-retry test ', async function () {
@@ -8,7 +9,7 @@ describe('node-fetch-retry test ', async function () {
 
         let opts = {
             retry: 3,
-            timeout: 2
+            signal: timeoutSignal(2),
         }
         try {
             await fetch('https://google.com', opts)
@@ -24,7 +25,7 @@ describe('node-fetch-retry test ', async function () {
         let calls = []
         let opts = {
             retry: 3,
-            timeout: 2,
+            signal: timeoutSignal(2),
             callback: retry => {
                 calls.push(retry)
             }
